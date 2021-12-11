@@ -141,7 +141,7 @@ const SetOfIntegers SetOfIntegers::operator+(const SetOfIntegers& arr)
 	return TEMP;
 }
 
-const SetOfIntegers SetOfIntegers::operator+=(const SetOfIntegers& arr)
+const SetOfIntegers& SetOfIntegers::operator+=(const SetOfIntegers& arr)
 {
 
 	int counter = 0;
@@ -204,7 +204,7 @@ const SetOfIntegers SetOfIntegers::operator-(const int& x)
 	return TEMP;
 }
 
-const SetOfIntegers SetOfIntegers::operator-=(const int& x)
+const SetOfIntegers& SetOfIntegers::operator-=(const int& x)
 {
 	bool flag = true;
 	for (int i = 0, j = 0; i < _size; i++)
@@ -262,7 +262,7 @@ const SetOfIntegers SetOfIntegers::operator-(const SetOfIntegers& arr)
 	return TEMP;
 }
 
-const SetOfIntegers SetOfIntegers::operator-=(const SetOfIntegers& arr)
+const SetOfIntegers& SetOfIntegers::operator-=(const SetOfIntegers& arr)
 {
 	int counter = 0;
 	for (int i = 0; i < _size; i++) {
@@ -322,7 +322,7 @@ const SetOfIntegers SetOfIntegers::operator*(const SetOfIntegers& arr)
 	return TEMP;
 }
 
-const SetOfIntegers SetOfIntegers::operator*=(const SetOfIntegers& arr)
+const SetOfIntegers& SetOfIntegers::operator*=(const SetOfIntegers& arr)
 {
 	int counter = 0;
 	for (int i = 0; i < _size; i++) {
@@ -371,7 +371,7 @@ const SetOfIntegers SetOfIntegers::operator+(const int& x)
 	return TEMP;
 }
 
-const SetOfIntegers SetOfIntegers::operator+=(const int& x)
+const SetOfIntegers& SetOfIntegers::operator+=(const int& x)
 {
 	int n = this->_size + 1;
 	int* temp = new int[n];
@@ -398,7 +398,7 @@ int SetOfIntegers::NewX()
 	return x;
 }
 
-const SetOfIntegers SetOfIntegers::operator=(const SetOfIntegers& arr)
+const SetOfIntegers& SetOfIntegers::operator=(const SetOfIntegers& arr)
 {
 	delete[] this->_arr;
 	this->_size = arr._size;
