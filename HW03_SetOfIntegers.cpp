@@ -170,6 +170,7 @@ const SetOfIntegers SetOfIntegers::operator+=(const SetOfIntegers& arr)
 		}
 		if (flag) { TEMP._arr[z] = arr._arr[i]; z++; }
 	}
+	delete[] this->_arr;
 	this->_size = TEMP._size;
 	this->_arr = new int[this->_size];
 	for (int i = 0; i < TEMP._size; i++)
@@ -222,6 +223,7 @@ const SetOfIntegers SetOfIntegers::operator-=(const int& x)
 	{
 		if (_arr[i] != x) { TEMP._arr[j] = _arr[i]; j++; }
 	}
+	delete[] this->_arr;
 	_size = TEMP._size;
 	_arr = new int[_size];
 	for (int i = 0; i < _size; i++)
@@ -282,6 +284,7 @@ const SetOfIntegers SetOfIntegers::operator-=(const SetOfIntegers& arr)
 		}
 		if (flag) { TEMP._arr[z] = _arr[i]; z++; }
 	}
+	delete[] this->_arr;	
 	_size = TEMP._size;
 	_arr = new int[_size];
 	for (int i = 0; i < _size; i++)
@@ -341,6 +344,7 @@ const SetOfIntegers SetOfIntegers::operator*=(const SetOfIntegers& arr)
 		}
 		if (flag) { TEMP._arr[z] = _arr[i]; z++; }
 	}
+	delete[] this->_arr;	
 	_size = TEMP._size;
 	_arr = new int[_size];
 	for (int i = 0; i < _size; i++)
@@ -376,6 +380,7 @@ const SetOfIntegers SetOfIntegers::operator+=(const int& x)
 		temp[i] = _arr[i];
 	}
 	temp[this->_size] = x;
+	delete[] this->_arr;	
 	this->_size = n;
 	this->_arr = new int[n];
 	for (int i = 0; i < n; i++)
@@ -395,6 +400,7 @@ int SetOfIntegers::NewX()
 
 const SetOfIntegers SetOfIntegers::operator=(const SetOfIntegers& arr)
 {
+	delete[] this->_arr;
 	this->_size = arr._size;
 	this->_arr = new int[_size];
 	for (int i = 0; i < _size; i++)
