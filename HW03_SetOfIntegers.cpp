@@ -111,10 +111,10 @@ void SetOfIntegers::ToString()
 const SetOfIntegers SetOfIntegers::operator+(const SetOfIntegers& arr)
 {
 	int counter = 0;
-	for (int i = 0; i < arr._size; i++)//операнд находящееся справа от оператора
+	for (int i = 0; i < arr._size; i++)
 	{
 		bool flag = true;
-		for (int j = 0; j < this->_size; j++)//операнд находящийся слева от оператора
+		for (int j = 0; j < this->_size; j++)
 		{
 			if (this->_arr[j] == arr._arr[i]) { flag = false;/* break;*/ }
 		}
@@ -145,10 +145,10 @@ const SetOfIntegers SetOfIntegers::operator+=(const SetOfIntegers& arr)
 {
 
 	int counter = 0;
-	for (int i = 0; i < arr._size; i++)//операнд находящееся справа от оператора
+	for (int i = 0; i < arr._size; i++)//Г®ГЇГҐГ°Г Г­Г¤ Г­Г ГµГ®Г¤ГїГ№ГҐГҐГ±Гї Г±ГЇГ°Г ГўГ  Г®ГІ Г®ГЇГҐГ°Г ГІГ®Г°Г 
 	{
 		bool flag = true;
-		for (int j = 0; j < this->_size; j++)//операнд находящийся слева от оператора
+		for (int j = 0; j < this->_size; j++)//Г®ГЇГҐГ°Г Г­Г¤ Г­Г ГµГ®Г¤ГїГ№ГЁГ©Г±Гї Г±Г«ГҐГўГ  Г®ГІ Г®ГЇГҐГ°Г ГІГ®Г°Г 
 		{
 			if (this->_arr[j] == arr._arr[i]) { flag = false; break; }
 		}
